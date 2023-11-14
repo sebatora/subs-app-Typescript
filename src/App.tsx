@@ -1,24 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import List from "./components/List";
+
+interface Sub {
+  nick: string;
+  subMonths: number;
+  avatar: string;
+  description?: string;
+}
+
+interface AppState {
+  subs: Sub[];
+  newSubsNumber: number;
+}
+
+const INITIAL_STATE = [
+  {
+    nick: "dapelu",
+    subMonths: 3,
+    avatar: "https://i.pravatar.cc/150?u=dapelu",
+    description: "Dapelu hace de moderador a veces",
+  },
+  {
+    nick: "sergio_serrano",
+    subMonths: 7,
+    avatar: "https://i.pravatar.cc/150?u=sergio_serrano",
+  },
+];
 
 function App() {
+  const [subs, setSubs] = useState<AppState["subs"]>([]);
+  const [newSubsNumber, setNewSubsNumber] =
+    useState<AppState["newSubsNumber"]>(0);
+
+  useEffect(() => {
+    setSubs(INITIAL_STATE);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Subscriptores</h1>
+      <List subs={subs}/>
     </div>
   );
 }
