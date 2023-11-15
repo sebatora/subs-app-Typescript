@@ -1,5 +1,5 @@
+import useNewSubForm from "../hooks/useNewSubForm";
 import { Sub } from "../types";
-import useNewSubForm from "../hooks/usenewSubForm";
 
 interface FormProps {
   onNewSub: (newSub: Sub) => void; // React.Dispatch<React.SetStateAction<Sub[]>>;

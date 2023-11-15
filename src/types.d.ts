@@ -4,3 +4,10 @@ export interface Sub {
   avatar: string;
   description?: string;
 }
+
+export type SubsResponseApi =  {
+  nick: string;
+  months: number;
+  profileUrl: string;
+  description: string;
+}[]
