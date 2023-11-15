@@ -17,13 +17,12 @@ type FormReducerAction =
       type: "CLEAR";
     };
 
-
-    const INITIAL_STATE = {
-      nick: "",
-      subMonths: 0,
-      avatar: "",
-      description: "",
-    };
+const INITIAL_STATE = {
+  nick: "",
+  subMonths: 0,
+  avatar: "",
+  description: "",
+};
 
 const formReducer = (
   state: FormState["inputData"],
@@ -47,9 +46,7 @@ const formReducer = (
 };
 
 const useNewSubForm = () => {
-  return useReducer(formReducer, INITIAL_STATE)
-}
+  return useReducer(formReducer, INITIAL_STATE);
+};
 
 export default useNewSubForm;
-
-
