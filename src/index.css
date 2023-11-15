@@ -33,3 +33,19 @@ ul li {
   max-width: 320px;
   padding: 8px 32px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 4px 6px;
+  margin: 4px;
+}
+
+form button {
+  margin: 10px;
+}
