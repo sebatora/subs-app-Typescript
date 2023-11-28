@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="App" ref={divRef}>
-      <h1>Subscriptores</h1>
+      <h1>Subscriptions</h1>
       <List subs={subs} />
       New Subs: {newSubsNumber}
       <Form onNewSub={handleNewSub} />
